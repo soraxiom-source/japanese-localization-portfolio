@@ -20,11 +20,16 @@ class I18nKeyParser(HTMLParser):
     def __init__(self):
         super().__init__()
         self.keys = set()
+        self.asset_paths = []
 
     def handle_starttag(self, _tag, attrs):
         attributes = dict(attrs)
         if "data-i18n" in attributes:
             self.keys.add(attributes["data-i18n"])
+        for attribute in ("href", "src"):
+            value = attributes.get(attribute)
+            if value and not value.startswith(("#", "http://", "https://", "mailto:")):
+                self.asset_paths.append(value)
 
 
 class LocalizationQATests(unittest.TestCase):
@@ -85,6 +90,14 @@ class LocalizationQATests(unittest.TestCase):
         en = json.loads((ROOT / "locales/en.json").read_text(encoding="utf-8"))
         html = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn(f">{len(flatten(en))}/{len(flatten(en))}<", html)
+
+    def test_site_assets_are_safe_for_github_pages_subpath(self):
+        parser = I18nKeyParser()
+        parser.feed((ROOT / "index.html").read_text(encoding="utf-8"))
+        absolute_paths = [path for path in parser.asset_paths if path.startswith("/")]
+        self.assertEqual(absolute_paths, [], f"Root-absolute paths break project Pages: {absolute_paths}")
+        app = (ROOT / "app.js").read_text(encoding="utf-8")
+        self.assertIn('fetch(`locales/${locale}.json`)', app)
 
 
 if __name__ == "__main__":
