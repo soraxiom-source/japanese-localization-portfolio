@@ -1,0 +1,8 @@
+meta:
+  title: "Kotoha Cloud — 日本語化デモ"
+review:
+  greeting: "おかえりなさい、{name}さん。"
+  delivery: "商品は{count}日後にお届け予定です。"
+  total: "合計：{amount}"
+qa:
+  note: "自動チェックはレビューを補助するものです。日本語の最終判断には、人による確認が必要です。"

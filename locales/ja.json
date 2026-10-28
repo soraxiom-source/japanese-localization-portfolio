@@ -1,0 +1,28 @@
+{
+  "meta": { "title": "Kotoha Cloud — 日本語化デモ" },
+  "hero": {
+    "eyebrow": "ローカライズ・ワークスペース",
+    "title": "言葉を、その土地の空気へ。",
+    "description": "英語から日本語への丁寧なローカライズを紹介する、架空のプロダクト画面です。",
+    "primaryAction": "レビューを始める",
+    "secondaryAction": "QAレポートを見る",
+    "disclaimer": "ポートフォリオ用のコンセプトです。商用サービスや顧客案件ではありません。"
+  },
+  "workspace": { "kicker": "本日のワークスペース", "title": "春季リリースのレビュー", "status": "予定どおり" },
+  "metrics": {
+    "progress": "翻訳の進捗", "progressNote": "150件中138件",
+    "review": "要レビュー", "reviewNote": "優先度「高」2件",
+    "quality": "品質スコア", "qualityNote": "プレースホルダー確認済み"
+  },
+  "review": {
+    "context": "購入手続き・お支払い", "heading": "画面上でのレビュー", "stringCount": "3件",
+    "greeting": "おかえりなさい、{name}さん。", "delivery": "商品は{count}日後にお届け予定です。",
+    "total": "合計：{amount}", "verified": "✓ 確認済み", "needsReview": "● 人による確認"
+  },
+  "qa": {
+    "kicker": "自動QA", "title": "構造チェックはすべて合格しました", "keys": "翻訳キー",
+    "placeholders": "プレースホルダー", "characters": "特殊文字", "match": "一致", "valid": "問題なし",
+    "note": "自動チェックはレビューを補助するものです。日本語の最終判断には、人による確認が必要です。"
+  },
+  "footer": { "copy": "オリジナルのポートフォリオデモ", "note": "ローカライズQAの例であり、実運用向けではありません" }
+}

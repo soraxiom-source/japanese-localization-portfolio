@@ -1,0 +1,28 @@
+{
+  "meta": { "title": "Kotoha Cloud — Localization Demo" },
+  "hero": {
+    "eyebrow": "LOCALIZATION WORKSPACE",
+    "title": "Ship words that feel at home.",
+    "description": "A fictional product interface demonstrating thoughtful English-to-Japanese localization.",
+    "primaryAction": "Start a review",
+    "secondaryAction": "View QA report",
+    "disclaimer": "Portfolio concept — not a commercial service or client project."
+  },
+  "workspace": { "kicker": "TODAY'S WORKSPACE", "title": "Spring release review", "status": "On track" },
+  "metrics": {
+    "progress": "Translation progress", "progressNote": "138 of 150 strings",
+    "review": "Needs review", "reviewNote": "2 high-priority items",
+    "quality": "Quality score", "qualityNote": "Placeholders verified"
+  },
+  "review": {
+    "context": "CHECKOUT · PAYMENT", "heading": "In-context review", "stringCount": "3 strings",
+    "greeting": "Welcome back, {name}.", "delivery": "Your order will arrive in {count} days.",
+    "total": "Total: {amount}", "verified": "✓ Verified", "needsReview": "● Human review"
+  },
+  "qa": {
+    "kicker": "AUTOMATED QA", "title": "All structural checks passed", "keys": "Translation keys",
+    "placeholders": "Placeholders", "characters": "Special characters", "match": "Match", "valid": "Valid",
+    "note": "Automated checks support reviewers; final Japanese copy requires human judgment."
+  },
+  "footer": { "copy": "Original portfolio demonstration", "note": "Built for localization QA, not production use" }
+}

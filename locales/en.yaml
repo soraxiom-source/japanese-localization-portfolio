@@ -1,0 +1,8 @@
+meta:
+  title: "Kotoha Cloud — Localization Demo"
+review:
+  greeting: "Welcome back, {name}."
+  delivery: "Your order will arrive in {count} days."
+  total: "Total: {amount}"
+qa:
+  note: "Automated checks support reviewers; final Japanese copy requires human judgment."
