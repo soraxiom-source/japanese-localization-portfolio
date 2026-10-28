@@ -1,5 +1,7 @@
 # Japanese Localization Portfolio
 
+[**Try the live bilingual demo →**](https://soraxiom-source.github.io/japanese-localization-portfolio/)
+
 [![Localization QA](https://github.com/soraxiom-source/japanese-localization-portfolio/actions/workflows/test.yml/badge.svg)](https://github.com/soraxiom-source/japanese-localization-portfolio/actions/workflows/test.yml)
 
 An original, dependency-free portfolio project demonstrating an
