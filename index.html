@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An original bilingual UI and Japanese localization QA portfolio demo.">
+  <title>Kotoha Cloud — Localization Demo</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Kotoha Cloud home">
+      <span class="brand-mark" aria-hidden="true">こ</span>
+      <span>Kotoha Cloud</span>
+    </a>
+    <nav class="header-actions" aria-label="Language settings">
+      <span id="language-label" class="language-label">Language</span>
+      <div class="language-switch" role="group" aria-labelledby="language-label">
+        <button class="language-option is-active" type="button" data-locale="en" aria-pressed="true">EN</button>
+        <button class="language-option" type="button" data-locale="ja" aria-pressed="false">日本語</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="eyebrow" data-i18n="hero.eyebrow">LOCALIZATION WORKSPACE</div>
+      <h1 id="hero-title" data-i18n="hero.title">Ship words that feel at home.</h1>
+      <p class="hero-copy" data-i18n="hero.description">A fictional product interface demonstrating thoughtful English-to-Japanese localization.</p>
+      <div class="hero-actions">
+        <button class="button button-primary" type="button" data-i18n="hero.primaryAction">Start a review</button>
+        <a class="button button-secondary" href="#qa" data-i18n="hero.secondaryAction">View QA report</a>
+      </div>
+      <p class="disclaimer" data-i18n="hero.disclaimer">Portfolio concept — not a commercial service or client project.</p>
+    </section>
+
+    <section class="workspace" aria-labelledby="workspace-title">
+      <div class="section-heading">
+        <div>
+          <p class="kicker" data-i18n="workspace.kicker">TODAY'S WORKSPACE</p>
+          <h2 id="workspace-title" data-i18n="workspace.title">Spring release review</h2>
+        </div>
+        <span class="status"><span class="status-dot"></span><span data-i18n="workspace.status">On track</span></span>
+      </div>
+
+      <div class="metrics" aria-label="Localization metrics">
+        <article class="metric-card">
+          <span class="metric-label" data-i18n="metrics.progress">Translation progress</span>
+          <strong>92%</strong>
+          <div class="progress"><span style="width: 92%"></span></div>
+          <small data-i18n="metrics.progressNote">138 of 150 strings</small>
+        </article>
+        <article class="metric-card">
+          <span class="metric-label" data-i18n="metrics.review">Needs review</span>
+          <strong>7</strong>
+          <small data-i18n="metrics.reviewNote">2 high-priority items</small>
+        </article>
+        <article class="metric-card">
+          <span class="metric-label" data-i18n="metrics.quality">Quality score</span>
+          <strong>96<span class="metric-unit">/100</span></strong>
+          <small data-i18n="metrics.qualityNote">Placeholders verified</small>
+        </article>
+      </div>
+
+      <div class="review-grid">
+        <article class="review-panel">
+          <div class="panel-header">
+            <div>
+              <span class="panel-label" data-i18n="review.context">CHECKOUT · PAYMENT</span>
+              <h3 data-i18n="review.heading">In-context review</h3>
+            </div>
+            <span class="count-badge" data-i18n="review.stringCount">3 strings</span>
+          </div>
+          <div class="string-row">
+            <span class="string-key">checkout.greeting</span>
+            <p data-i18n="review.greeting" data-i18n-vars='{"name":"Aiko"}'>Welcome back, Aiko.</p>
+            <span class="verified" data-i18n="review.verified">✓ Verified</span>
+          </div>
+          <div class="string-row is-selected">
+            <span class="string-key">checkout.delivery</span>
+            <p data-i18n="review.delivery" data-i18n-vars='{"count":"2"}'>Your order will arrive in 2 days.</p>
+            <span class="review-needed" data-i18n="review.needsReview">● Human review</span>
+          </div>
+          <div class="string-row">
+            <span class="string-key">checkout.total</span>
+            <p data-i18n="review.total" data-i18n-vars='{"amount":"¥12,800"}'>Total: ¥12,800</p>
+            <span class="verified" data-i18n="review.verified">✓ Verified</span>
+          </div>
+        </article>
+
+        <aside id="qa" class="qa-panel" aria-labelledby="qa-title">
+          <div class="qa-icon" aria-hidden="true">✓</div>
+          <p class="panel-label" data-i18n="qa.kicker">AUTOMATED QA</p>
+          <h3 id="qa-title" data-i18n="qa.title">All structural checks passed</h3>
+          <ul>
+            <li><span data-i18n="qa.keys">Translation keys</span><strong>34/34</strong></li>
+            <li><span data-i18n="qa.placeholders">Placeholders</span><strong data-i18n="qa.match">Match</strong></li>
+            <li><span data-i18n="qa.characters">Special characters</span><strong data-i18n="qa.valid">Valid</strong></li>
+          </ul>
+          <p class="qa-note" data-i18n="qa.note">Automated checks support reviewers; final Japanese copy requires human judgment.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span data-i18n="footer.copy">Original portfolio demonstration</span>
+    <span data-i18n="footer.note">Built for localization QA, not production use</span>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
